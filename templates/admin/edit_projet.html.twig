@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="../../css/edit_projet.css">
+{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+    <h2 id="mainTitle"> Editer un projet </h2>
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit" class="btn btn-info">Modifier</button>
+    {{ form_end(form) }}
+    {% else %} 
+        <div class="alert alert-danger">
+            Vous devez d'abord vous identifier.
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    <div>
+        <a id="cv" href="" target="_blank">Curriculum Vitae (pdf)</a>
+      </div>
+      <div>
+        <a href="" target="_blank">
+          <img src="../../img/linkedin.png"> 
+        </a>
+      </div>
+{% endblock %}

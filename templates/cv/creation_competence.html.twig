@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/creation_competence.css">
+{% endblock %}
+
+{% block body %}
+{% if app.user %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Valeur <span>(niveau de compétence)</span></th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for competence in competences %}
+            <tr class="table-default">
+                <td>{{ competence.id }}</td>
+                <td>{{ competence.nom }}</td>
+                <td>{{ competence.value }}</td>
+                <td>{{ competence.description }}</td>
+                <td><button type="button" onclick="location.href='{{ path('edit_competence', {id: competence.id})}}'" class="btn btn-outline-info">Editer</button></td>
+                <td>
+                    <form method="post" action="{{ path('delete_competence', {id: competence.id}) }}">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ competence.id)}}">
+                        <button type="submit" onclick="location.href='{{ path('delete_competence', {id:competence.id})}}'" class="btn btn-outline-danger">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h6> Ajouter une nouvelle compétence </h6>
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit" class="btn btn-success">Ajouter</button>
+    {{ form_end(form) }}
+{% else %}
+<div class="alert alert-danger">
+            Vous devez d'abord vous identifier.
+        </div>
+{% endif %}
+{% endblock %}

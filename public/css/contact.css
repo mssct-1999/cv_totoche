@@ -1,0 +1,151 @@
+/** FOOTER BODY **/
+
+h2 {
+    margin-top : 40px;
+}
+
+#container {
+    display : flex;
+    justify-content : center;
+}
+
+div.card.bg-light.mb-3 {
+    margin-left : 50px;
+    margin-top : 50px;
+    border-radius : 10px;
+}
+
+.card-title {
+    text-align : center;
+}
+
+#logoLinkedin {
+    width : 150px;
+}
+
+.images img {
+    width : 150px;
+}
+
+.images img:last-child {
+    display: none;
+}
+
+/** PARTIE LINKEDIN **/
+
+#logoLinkedin {
+    background-image: url("../img/linkedinG.png");
+    background-size : 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardLinkedin:hover #logoLinkedin {
+    background-image : url("../img/linkedin.png");
+    background-size: 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardLinkedin:hover #headLinkedin {
+    background-color : #D8D5C5; 
+}
+
+#cardLinkedin:hover #linkedinTitle {
+    color : #0274B3;
+}
+/** PARTIE MAIL **/
+
+#logoMail {
+    background-image: url("../img/mailG.png");
+    background-size: 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardMail:hover #logoMail {
+    background-image: url("../img/mail.png");
+    background-size: 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardMail:hover #headMail {
+    background-color : #D8D5C5;
+}
+
+#cardMail:hover #mailTitle {
+    color : #DA3B32;
+}
+
+#mailText {
+    font-size : 12px;
+}
+/** PARTIE TEL **/
+
+#logoTel {
+    background-image: url("../img/telG.png");
+    background-size: 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardTel:hover #logoTel {
+    background-image: url("../img/tel.png");
+    background-size: 150px;
+    width : 150px;
+    height : 150px;
+}
+
+#cardTel:hover #headTel {
+    background-color : #D8D5C5;
+}
+
+#cardTel:hover #telTitle {
+    color : #6CF45C;
+}
+
+/** PARTIE FORMULAIRE DE CONTACT **/
+
+#secondTitle {
+    margin-top : 70px;
+}
+
+label {
+    margin-top : 20px;
+    font-size : 9px;
+}
+
+/** FOOTER CSS **/
+#cv {
+    color : white;
+    font-size : 10px;
+}
+
+footer {
+        margin-top : 500px;
+        position : fixed;
+        bottom : 0;
+        left : 0;
+        right : 0;
+}
+
+#cv:hover {
+    text-decoration: none;
+    color: rgb(150,150,150);
+}
+
+footer img {
+    width : 30px;
+    margin-left : 10px;
+}
+
+button {
+    margin-top : 20px;
+}
+
+/** PARTIE RESPONSIVE (MOBILE) **/
+
+@media handheld {
+    /* A FAIRE */ 
+}

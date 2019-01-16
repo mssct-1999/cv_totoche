@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/creation_formation.css">
+{% endblock %}
+
+    {% block body %}
+    {% if app.user %}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Date projet</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for projet in projets %}
+                <tr class="table-default">
+                    <td>{{ projet.id }}</td>
+                    <td>{{ projet.titre }}</td>
+                    <td>{{ projet.dateProjet | date('Y') }}</td>
+                    <td>{{ projet.description }}</td>
+                    <td>{{ projet.image }}</td>
+                    <td><button type="button" onclick="location.href='{{ path('edit_projet', {id: projet.id})}}'" class="btn btn-outline-info">Editer</button></td>
+                    <td>
+                        <form method="post" action="{{ path('delete_projet', {id: projet.id}) }}">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ projet.id)}}">
+                            <button type="submit" onclick="location.href='{{ path('delete_projet', {id:projet.id})}}'" class="btn btn-outline-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <h6> Ajouter un nouveau projet </h6>
+        {{ form_start(form) }}
+            {{ form_rest(form) }}
+            <button type="submit" class="btn btn-success">Ajouter</button>
+        {{ form_end(form) }}
+        {% else %}
+            <div class="alert alert-danger">
+                Vous devez d'abord vous identifier.
+            </div>
+        {% endif %}
+    {% endblock %}

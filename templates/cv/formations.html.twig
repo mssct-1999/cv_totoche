@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/formations.css">
+{% endblock %}
+
+{% block body %}
+    <h2> Formations suivies </h2> 
+    {% for formation in formations %}
+        <div class="card border-info mb-4" style="max-width: 40rem;">
+            <div class="card-header"> • {{ formation.ecole }} - {{ formation.anneeDebut | date('Y') }}/{{ formation.anneeFin | date('Y') }}</div>
+            <div class="card-body">
+                <p class="card-text">{{ formation.description }} </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

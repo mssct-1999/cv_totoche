@@ -1,0 +1,70 @@
+/* Partie CSS Tableau */
+
+button.btn.btn-success {
+    border-radius : 5px;
+}
+
+button.btn.btn-outline-danger {
+    border-radius : 5px;
+}
+
+button.btn.btn-outline-info {
+    border-radius : 5px;
+}
+
+th span {
+    font-size : 5px;
+}
+
+/* Partie CSS Formulaire */
+
+#input_description {
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
+label {
+    margin-top : 20px;
+}
+
+h6 {
+    margin-top : 40px;
+    margin-bottom : 40px;
+}
+
+label span {
+    font-size : 9px;
+}
+
+textarea {
+    resize : none;
+}
+
+#cv {
+    color : white;
+    font-size : 10px;
+}
+
+/* Partie CSS Footer */
+
+footer {
+        position : fixed;
+        bottom : 0;
+        left : 0;
+        right : 0;
+        margin-top : 300px;
+}
+
+#cv:hover {
+    text-decoration: none;
+    color: rgb(150,150,150);
+}
+
+footer img {
+    width : 30px;
+    margin-left : 10px;
+}
+
+div.alert.alert-danger {
+    margin-top : 20px;
+}
