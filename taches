@@ -1,12 +1,7 @@
 //// IMPORTANT \\\\
 
--> trouver comment ajouter des photos dans caroussel : pb de boucle for (se renseigner sur internet et youtube)
-
 -> formulaire de contact : 
-    style : rajouter ombrage sur div lorsque survoler ? (regarder css projet s1)
     rendre le tout fonctionel (envoi de mail à an.massicot@gmail.com si form remplit) -> regarder tuto sur internet, youtube
-
--> s'occuper des blob (transformer blob de bd en img) -> se réorienter sur upload d'img ? -> regarder vidéo youtube
 
 //// SECONDAIRE \\\\
 
@@ -17,8 +12,6 @@
 -> Pour page twig loisirs : vidéo à faire
 
 -> ajouter cv pdf sur base twig
-
--> dans page d'accueil : réfléchir à une disposition des éléments du projet (utiliser AJAX? JS? quels mise en page?)
 
 -> remplacer faux texte et fausses images
 
